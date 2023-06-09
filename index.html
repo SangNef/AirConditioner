@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Conditioner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./src//images//lg_logo_icon_170264.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="flex w-full h-[100vh] justify-center overflow-hidden">
+    <div
+        class="relative flex w-[700px] h-[220px] mt-8 rounded-[40px] bg-[#eee] shadow-[1rem_1rem_1.25rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]">
+        <div class="absolute w-7 h-auto left-[50%] top-[120px] -translate-x-1/2">
+            <img src="./src/images/logo.png" alt="">
+        </div>
+        <div id="num_air" class="absolute font-roboto right-[12%] top-20 text-4xl text-cyan-400">16</div>
+        <div
+            class="relative w-[80%] h-8 top-[140px] ml-[10%] border-[1px] border-zinc-300 rounded-t-md duration-500 bg-neutral-500">
+            <div id="vents" class="absolute bottom-0 w-full h-full rounded-sm bg-slate-300 duration-150"></div>
+        </div>
+    </div>
+    <div
+        class="flex justify-center w-[250px] h-[500px] bg-[#eee] absolute top-[50%] ml-[30%] rounded-3xl shadow-[1rem_1rem_1.25rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]">
+        <div class="w-[80%] h-40 relative">
+            <div
+                class="rounded-lg bg-[#e6e9f3] w-full h-[100%] py-4 my-10 flex items-center justify-center shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.1)]">
+                <div id="screen" class="w-[100%] h-[100%] items-center justify-center">
+                    <div id="mode_screen" class="absolute left-5 top-12 text-cyan-400"><i class="fa-solid fa-snowflake"></i></div>
+                    <div id="num" class="font-roboto text-6xl text-cyan-400">16</div>
+                    <div id="speed_screen" class="absolute text-cyan-400 right-3 bottom-4">100%</div>
+                    <div id="battery_screen" class="absolute left-5 -bottom-10 text-cyan-400"><i class="fa-solid fa-battery-full"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-56 grid grid-cols-3 w-[80%]">
+            <button id="power" onclick="audio.play()"
+                class="w-12 h-10 mb-3 rounded-md bg-orange-600 text-white m-auto shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-power-off"></i></button>
+            <button id="mode" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold text-xs shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]">MODE</button>
+            <button id="light" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-lightbulb"></i></button>
+            <button id="swing" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-arrow-down-wide-short"></i></button>
+            <button id="up" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-chevron-up"></i></button>
+            <button id="speed" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-fan"></i></button>
+            <button id="battery" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-battery-three-quarters"></i></button>
+            <button id="down" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-chevron-down"></i></button>
+            <button id="time" onclick="audio.play();"
+                class="w-12 h-10 mb-3 rounded-md m-auto font-bold shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"><i
+                    class="fa-solid fa-clock"></i></button>
+
+        </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+    <script>
+        const audio = new Audio();
+        audio.src = "./src/audio/remote.mp3";
+    </script>
+</body>
+
+</html>
